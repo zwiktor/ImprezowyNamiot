@@ -1,2 +1,2 @@
 # ImprezowyNamiot
-Strona dla znajomej
+Strona utworzona w technologiach HTML/CSS/BOOTSTRAP/JAVASCRIPT
