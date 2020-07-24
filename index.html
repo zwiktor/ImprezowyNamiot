@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="icon" href="img/ikona_in.ico">
+
+  <title>Imprezowy namiot</title>
+
+  
+  <style>
+
+    .card div h4 {
+      text-align: center;
+    }
+
+
+    .card div p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    /* Glyph, by Harry Roberts */
+    .my-container2 {
+      position: relative;
+      z-index: 2;
+
+    }
+
+    .my-container {
+      position: relative;
+      background: #FFF9FF;
+      overflow: hidden;
+    }
+
+    /* You could use :after - it doesn't really matter */
+    .my-container::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.2;
+      background-image: url('img/tlo.jpg');
+      background-repeat: repeat;
+    }
+
+    .stl {
+      overflow: visible;
+      /* For IE */
+      padding: 0;
+      border: none;
+      border-top: medium double #333;
+      color: #333;
+      text-align: center;
+    }
+
+    .stl:after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: -0.7em;
+      font-size: 1em;
+      padding: 0 0.25em;
+      background: white;
+    }
+
+
+    .masthead {
+      height: 100vh;
+      min-height: 500px;
+      background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url('img/image1.jpeg') center no-repeat;
+      background-size: cover;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-bottom: 500px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card {
+      background-color: whitesmoke;
+    }
+
+    .card a {
+      margin: 5px 5px;
+    }
+
+    a[data-toggle="collapse"]:hover {
+      cursor: pointer;
+    }
+
+    .table .table-row-self td {
+      padding: 5px 5px;
+      vertical-align: middle;
+    }
+
+    .table tbody {
+      font-size: 13px;
+    }
+
+    div > i {
+      margin: auto;
+      text-align: center;
+      font-size: 50px;
+    }
+
+    i ~ p {
+      text-align: center;
+      padding-top: 15px;
+
+    }
+
+    @media only screen and (min-width: 760px) {
+      div > i {
+        font-size: 150px;
+          }
+      i ~ p {
+        font-size: 2rem;
+    }
+
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="my-container">
+
+    <div class="my-container2">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top" style="padding: 0;">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="img/logo_in.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#onas-scroll">O Nas
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#oferta-sroll">Oferta</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#cennik-sroll">Cennik</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#kontakt-scroll">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <header class="masthead">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+              <h1 class="text-light font-weight-light w3-animate-top"
+                style="margin: auto 0; font-size: 34px; animation-duration: 1s;">Organizacja<br> imprez plenerowych
+              </h1>
+              <hr style="background-color: white; width: 80% text-center;">
+              <p class="text-light w3-animate-bottom" style="animation-duration: 1s;">Zadbamy o każdy szczegół twojej
+                wymarzonej uroczystości</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--about us section-->
+
+      <div class="container pt-5 pb-5" id="onas-scroll">
+        <h1 class="text-center">O Nas</h1>
+        <div class="text-center text-justify"><img src="img/onas_logo.png" alt="logo" class="img-fluid"></div>
+        
+        <p class="text-justify" style="padding-top: 20px;">Jesteśmy dla Was by stworzyć Waszą wymarzoną imprezę pod chmurką.
+          Stawiamy na kompleksową organizację plenerów wszelkiego typu: komunie, chrzciny,
+          urodziny, rocznice, poprawiny wesel.
+          Jako organizatorzy imprez plenerowych dopełniamy wszelkich starań, aby oferowana
+          usługa była na najwyższym poziomie.
+          Zapraszamy wszystkich chętnych do kontaktu i tworzenia wyjątkowych wydarzeń,
+          które zapewne trwale pozostaną w pamięci.
+        </p>
+        <br>
+        <br>
+
+        <p>
+          <div class="row text-center">
+            <div class="col"><i class="fas fa-truck"></i><p>Przyjedziemy</p></div>
+            <div class="col"><i class="fas fa-tools"></i><p>Rozłożymy</p></div>
+            <div class="col"><i class="fas fa-smile-beam"></i><p>Przyjęcie umilimy</p></div>
+          </div>  
+
+      </div>
+
+
+
+      <!--MAIN CONTENT OFERTA-->
+
+      <!-- Page Content -->
+      <div class="container">
+
+        <!-- Page Heading -->
+        <h1 class="my-4 text-center" role="button" id="oferta-sroll">Nasza Oferta</h1>
+
+        <hr class="stl">
+
+        <a data-toggle="collapse" data-target="#collapseNamioty">
+          <h2 class="my-4 text-center" style="text-align: center;">
+
+            Namioty
+          </h2>
+        </a>
+
+        <div class="collapse" id="collapseNamioty">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100 ">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/Namiot10x5.png"
+                    alt="namiot 5x10 m"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Namiot imprezowy 5x10m </a>
+                  </h4>
+                  <p class="card-text">Namiot o nowoczesnym, jasnym wnętrzu z oknami łukowymi w kolorze białym. Jest on stabilny i wytrzymały z wieloma elementami stabilizującymi. Idealny  na wesela, komunie, urodziny i inne uroczystości. Ok. 70 miejsc siedzących. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/Namiot8x5.png"
+                    alt="5x8m Namiot imprezowy"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Namiot imprezowy 5x8m</a>
+                  </h4>
+                  <p class="card-text">Namiot imprezowy w  kolorze białym z dekoracyjnymi oknami łukowymi do wykorzystania podczas przyjęcia w ogrodzie. Właściwy na każdą okazję. Idealny na potrzeby firm, a także podczas wesel, urodzin, bierzmowań i innych uroczystości. Ok. 50 miejsc siedzących.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/Namiot6x5.png"
+                    alt="5x6m Namiot imprezowy"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Namiot imprezowy 5x6m</a>
+                  </h4>
+                  <p class="card-text">Namiot imprezowy w kolorze białym z dekoracyjnymi oknami łukowymi do wykorzystania podczas przyjęcia w plenerze. Ok. 30 miejsc siedzących.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/pawilon.png"
+                    alt="Pawilon Ogrodowy 3x3m"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Pawilon Ogrodowy 3x3m</a>
+                  </h4>
+                  <p class="card-text">Nowoczesny pawilon w kolorze szampańskim stworzony z myślą o wymarzonym ślubie plenerowym. </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <hr class="stl">
+
+        <a data-toggle="collapse" data-target="#collapseMeble">
+          <h2 class="my-4 text-center" style="text-align: center;">
+
+            Meble eventowe i dodatki
+          </h2>
+        </a>
+
+
+
+        <div class="collapse" id="collapseMeble">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/zestaw_biesiadny.png"
+                    alt="Zestaw biesiadny"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Zestaw biesiadny</a>
+                  </h4>
+                  <p class="card-text">Zestawy wykonane z drewna sosnowego. Wymiary stołu 80/220cm. Wymiary ławek 25/220cm. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/stol_prosto.png"
+                    alt="Stół cateringowy prostokątny 200x90cm biały"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Stół prostokątny 200x90cm</a>
+                  </h4>
+                  <p class="card-text">Stół cateringowy, biały, składany to idealny wybór dla osób, które cenią prostotę i funkcjonalność. Doskonale sprawdzi się podczas imprez plenerowych. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/stolik.png"
+                    alt="Stolik koktajlowy 80x110cm"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Stolik koktajlowy 80x110cm </a>
+                  </h4>
+                  <p class="card-text">Stół w kolorze białym, który w połączeniu z pokrowcem doda każdej imprezie elegancji i uroku.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/krzesło.png"
+                    alt="Krzesło składane bankietowe"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Krzesło składane bankietowe</a>
+                  </h4>
+                  <p class="card-text">Bardzo wygodne i stabilne krzesła w kolorze białym. Doskonale sprawdzą się podczas imprez plenerowych i innych wydarzeń. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/obrus.png"
+                    alt="Obrus na stół bankietowy 280x170cm"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Obrus na stół bankietowy 280x170cm</a>
+                  </h4>
+                  <p class="card-text">Klasyczny obrus plamoodporny w kolorze białym. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/pokrowiec.png"
+                    alt="Pokrowiec na stolik koktajlowy "></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Pokrowiec na stolik koktajlowy </a>
+                  </h4>
+                  <p class="card-text">Pokrowiec na stolik koktajlowy w kolorze białym zachwyci każdego gościa. 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="stl">
+        <a data-toggle="collapse" data-target="#collapseGastro">
+          <h2 class="my-4 text-center" style="text-align: center;">
+
+            Sprzęt gastronomiczny
+          </h2>
+        </a>
+
+
+
+        <div class="collapse" id="collapseGastro">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/grill.png"
+                    alt="GRILL gazowy "></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Grill gazowy </a>
+                  </h4>
+                  <p class="card-text">5 palników o mocy 16 kW. Grille gazowe coraz częściej zastępują tradycyjne grille węglowe ze względu na szybkość i wygodę przygotowania potraw oraz niskie koszty eksploatacji. Możliwość regulacji mocy grilla sprawia, że potrawy nie przypalają się. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/bemar_okragly.jpg" height="200"
+                    alt="Podgrzewacz okragly"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Podgrzewacz okrągły</a>
+                  </h4>
+                  <p class="card-text">Podgrzewacz z okrągłym pojemnikiem długo podtrzymuje ciepło potraw. Zabezpieczony pojemnik na pastę. Kąpiel wodna zapobiega przypalaniu potraw oraz naczyń.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/bemar8l.png"
+                    alt="Podgrzewacz na pastę – 8 l"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Podgrzewacz na pastę – 8 l</a>
+                  </h4>
+                  <p class="card-text">Pokrywa z nienagrzewającym się uchwytem osadzona na ruchomym stojaku. Zabezpieczone pojemniki na pastę. Znakomicie sprawdzi się na przyjęciu plenerowym, np. w ogrodzie. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/bemar10l.png"
+                    alt="Kociołek do zupy - 10 litrów "></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Kociołek do zupy - 10 l</a>
+                  </h4>
+                  <p class="card-text">Pojemność 10 l pozwalająca podgrzać jednorazowo dużą ilość zupy.  Moc 400 W zapewniająca szybkie nagrzewanie. Temperatura do 100°C utrzymuje danie w cieple. 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/warnik.png"
+                    alt="Warnik do wody - 15l "></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Warnik do wody - 15 l </a>
+                  </h4>
+                  <p class="card-text">Uniwersalne urządzenie do gotowania i podgrzewania wody oraz przygotowywania grzanego wina lub piwa. Precyzyjny termostat zapewniający regulację temperatury w zakresie 30-100°C.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/kawa.png"
+                    alt="Ekspres do kawy"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Ekspres do kawy</a>
+                  </h4>
+                  <p class="card-text">
+                    Któż wyobraża sobie imprezę bez aromatycznej, świeżo mielonej kawy? 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="stl">
+        <a data-toggle="collapse" data-target="#collapseInne">
+          <h2 class="my-4 text-center" style="text-align: center;">
+
+            Inne
+          </h2>
+        </a>
+
+
+
+        <div class="collapse" id="collapseInne">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/grinlandy.png"
+                    alt="Girlandy żarówkowe"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Girlandy żarówkowe</a>
+                  </h4>
+                  <p class="card-text">Niezwykle modne obecnie girlandy żarówkowe są nieodłącznym elementem imprez plenerowych oraz wesel w ogrodzie. Nadają wydarzeniom niezwykły  charakter i klimat. 15m długości i 20 żarówek w stylu retro.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/panele.png"
+                    alt="Oświetlenie panelowe"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Oświetlenie panelowe</a>
+                  </h4>
+                  <p class="card-text">Panele LED satysfakcjonująco oświetlają namioty imprezowe.  
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/parasol.png"
+                    alt="Parasol grzewczy"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Parasol grzewczy</a>
+                  </h4>
+                  <p class="card-text">Parasol grzewczy o mocy 13kW znajdzie zastosowanie przy organizacji plenerów w chłodniejsze dni. Z pełnym powodzeniem impreza plenerowa uda się nawet jesienią lub zimą.
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/dmuchawa.png"
+                    alt="Dmuchawa gazowa"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Dmuchawa gazowa</a>
+                  </h4>
+                  <p class="card-text">Kompaktowa dmuchawa gazowa do nagrzewania namiotów imprezowych. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/muzyka.jpg"
+                    alt="Zestaw muzyczny" height=auto></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Zestaw muzyczny</a>
+                  </h4>
+                  <p class="card-text">Solidna obudowa i mocny wzmacniacz czynią z tego urządzenia bardzo dobre rozwiązanie w kwestii nagłośnienia dla Twojej imprezy. Całkowita moc muzyczna systemu na poziomie 1200 W sprawi, że zabawa będzie udana nawet w plenerze. Dodatkową atrakcją urządzenia jest funkcja karaoke i oświetlenie Disco LED. 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="card h-100">
+                <a href="#cennik-sroll"><img class="card-img-top" src="img/zastawa.png"
+                    alt="Przedłużacz bębnowy"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#cennik-sroll">Nakrycie stołowe</a>
+                  </h4>
+                  <p class="card-text">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- /.container -->
+
+      <h1 class="my-4 text-center">Oferta Specjalna</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mb-4" style="min-height: 300px;">
+            <div class="card h-100 text-center bold" style="color:rgb(236, 236, 236); background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .20)), url('img/animacje.jpg') center no-repeat; background-size: cover;">
+              <h2>Animacje dla dzieci</h2>
+            </div>
+
+
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-4" style="min-height: 300px;">
+            <div class="card h-100 text-center bold" style="color:rgb(236, 236, 236); background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .20)), url('img/kelner.jpg') top no-repeat; background-size: cover;">
+              <h2>Obsługa grilla/gości</h2>
+            </div>
+
+
+          </div>
+
+          <div class="col-lg-4 col-sm-6 mb-4" style="min-height: 300px;">
+            <div class="card h-100 text-center bold" style="color:rgb(236, 236, 236); background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .20)), url('img/wieprz.jpg') center no-repeat; background-size: cover;">
+              <h2>Prosiak pieczony - ekologiczny</h2>
+            </div>
+
+
+
+
+          </div>
+
+
+          <div class="col-lg-4 col-sm-6 mb-4" style="min-height: 300px;">
+            <div class="card h-100 text-center bold" style="color:rgb(236, 236, 236); background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .20)), url('img/czekolada.jpg') center no-repeat; background-size: cover;">
+              <h2>Fontanna czekoladowa</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <!--CENNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNIK-->
+
+
+      <h1 class="my-4 text-center" id="cennik-sroll">Cennik</h1>
+
+      <table class="table text-center " style="max-width: 700px; margin: 0 auto 50px auto;">
+        <thead class="thead-light">
+          <tr>
+            <th>Przedmiot</a></th>
+            <th>Kategoria</th>
+            <th>Cena(zł)</th>
+          </tr>
+        </thead>
+        <tbody style="vertical-align: middle;">
+          <tr class="table-row-self" style="background-color: #d3f4ffb9;">
+            <td>Namiot imprezowy 5x10m, biały</td>
+            <td>Namioty</td>
+            <td>600</td>
+          </tr>
+          <tr class="table-row-self" style="background-color: #d3f4ffb9;">
+            <td>Namiot imprezowy 5x8m, biały</td>
+            <td>Namioty</td>
+            <td>550</td>
+          </tr>
+          <tr class="table-row-self" style="background-color: #d3f4ffb9;">
+            <td>Namiot imprezowy 5x6m, biały</td>
+            <td>Namioty</td>
+            <td>500</td>
+          </tr>
+          <tr class="table-row-self" style="background-color: #d3f4ffb9;">
+            <td>Pawilon ogrodowy 3x3m</td>
+            <td>Namioty</td>
+            <td>250</td>
+          </tr>
+
+          <tr class="table-row-self" style="background-color: #d3f4ffb9;">
+            <td>Zestaw biesiadny – komplet </td>
+            <td>Meble</td>
+            <td>20</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Stół cateringowy 200x90cm</td>
+            <td>Meble</td>
+            <td>15</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Stół koktajlowy cateringowy</td>
+            <td>Meble</td>
+            <td>15</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Krzesło cateringowe</td>
+            <td>Meble</td>
+            <td>5</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Obrus na stół cateringowy</td>
+            <td>Dodatki</td>
+            <td>11</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Pokrowiec na stół koktajlowy</td>
+            <td>Dodatki</td>
+            <td>8</td>
+          </tr>
+
+          <tr class="table-row-self" style="background-color:#d3f4ffb9">
+            <td>Grill gazowy</td>
+            <td>Gastronomia</td>
+            <td>100</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Podgrzewacz do potraw </td>
+            <td>Gastronomia</td>
+            <td>30</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Kociołek do podgrzewania zupy 10l</td>
+            <td>Gastronomia</td>
+            <td>20</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Warnik do wody 15l</td>
+            <td>Gastronomia</td>
+            <td>20</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Ekspres do kawy</td>
+            <td>Gastronomia</td>
+            <td>50</td>
+          </tr>
+
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Oświetlenie namiotu(girlanda)</td>
+            <td>Inne</td>
+            <td>60</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Oświetlenie panelowe</td>
+            <td>Inne</td>
+            <td>30</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Dmuchawa gazowa</td>
+            <td>Inne</td>
+            <td>50</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Parasol grzewczy gazowy</td>
+            <td>Inne</td>
+            <td>70</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Zestaw muzyczny </td>
+            <td>Inne</td>
+            <td>90</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Przedłużacz bębnowy</td>
+            <td>Inne</td>
+            <td>15</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Stojak na worek na śmieci</td>
+            <td>Inne</td>
+            <td>5</td>
+          </tr>
+          <tr class="table-row-self" style="background-color:#d3f4ffb9;">
+            <td>Nakrycie stołowe</td>
+            <td>Inne</td>
+            <td>4</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+      <!--FOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOTER-->
+
+
+      <footer class="page-footer font-small unique-color-white pt-4" style="background-color: whitesmoke; opacity: 0.7">
+
+
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+          <!-- Grid row -->
+          <div class="row mt-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+              <!-- Content -->
+              <h6 class="text-uppercase font-weight-bold">Imprezowy Namiot</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>Jesteśmy po to, aby pomóc w zorganizowaniu wspaniałej imprezy</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Oferta</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a href="#oferta-sroll">Namioty</a>
+              </p>
+              <p>
+                <a href="#oferta-sroll">Meble eventowe</a>
+              </p>
+              <p>
+                <a href="#oferta-sroll">Sprzęt gastronomiczny</a>
+              </p>
+              <p>
+                <a href="#oferta-sroll">Inne</a>
+              </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Kontakt</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 200px;">
+              <p>
+                <i class="fas fa-phone mr-3"></i>Tel: 512601606</p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i>Mail: imprezowy_namiot@wp.pl</p>
+
+              <p>
+                <i class="fas fa-home mr-3"></i>Adres: Smolniki 5,16-407 Wiżajny</p>
+
+
+
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" id="kontakt-scroll">© 2019 Copyright:
+          <p>Wiktor Zachar 509967715</p>
+        </div>
+        <!-- Copyright -->
+
+      </footer>
+
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const collapsedMenu = document.querySelector(".navbar-collapse");
+      const menuBtn = document.querySelector(".navbar-toggler");
+      const menuItems = document.querySelectorAll('.nav-link');
+
+
+      console.log(menuItems)
+      for (let menuItem of menuItems) {
+        menuItem.addEventListener('click', () => {
+          collapsedMenu.classList.remove("show");
+        })
+      }
+    })
+
+
+  </script>
+<script src="https://kit.fontawesome.com/eec63da8a8.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
